@@ -8,7 +8,7 @@ interface clogconfig {
   }
   const configdata = fs.readFileSync(path.join(__dirname, "./config.json"), 'utf8');
     const config: clogconfig = JSON.parse(configdata);
-    let interval: number;
+    let interval: NodeJS.Timeout;
     function Sequence(): void {
         const combatmap = new Map<string, number>();
 events.entityKnockback.on(event => {
