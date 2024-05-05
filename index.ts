@@ -32,6 +32,14 @@ events.playerLeft.on(async ev => {
     }
    }
 })
+events.entityDie.on(async ev => {
+    if (ev.entity.isPlayer() === false) return;
+    const combatTime = combatmap.get(ev.entity.getName());
+    if (combatTime !== undefined) {
+        if (combatTime === 0) return;
+        combatmap.set(ev.entity.getName(), 0);
+    }
+    })
 interval = setInterval(() => {
     for (const player of bedrockServer.serverInstance.getPlayers()) {
         if (!player) return;
