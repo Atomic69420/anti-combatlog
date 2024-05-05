@@ -1,0 +1,14 @@
+{
+	"name": "@bdsx/anti-combatlog",
+	"version": "1.0.0",
+	"description": "A bdsx plugin to stop players from combat logging.",
+	"main": "index.js",
+	"keywords": ["BDSX", "BDSX-Plugin", "Anticheat"],
+	"author": "Atomic69420, AtomicTM6850 or ip_atomic",
+	"license": "CC-BY-NC-ND-4.0",
+	"bdsxPlugin": true,
+	"devDependencies": {
+	  "bdsx": "file:../bdsx"
+	},
+	"dependencies": {}
+  }
