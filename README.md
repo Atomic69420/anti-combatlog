@@ -8,7 +8,7 @@ Please read the license file which contains a Creative Commons CC BY-NC-ND 4.0 l
 - [x] Tell player that they are in combat through action bar
 - [x] Disable kill message on combat log
 - [x] Customizable combat time
-- [ ] Disable pearls, tridents and elytras when in combat
+- [x] Disable pearls, [x] tridents and [ ] elytras when in combat
 ## Config
 - combattime: the amount of time a player needs to wait until leaving without any punishment.
 - disablekillmessageonclog: disable the death message when a player is killed via the usage of commands.
