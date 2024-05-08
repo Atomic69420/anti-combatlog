@@ -7,12 +7,14 @@ import { NBT } from "bdsx/bds/nbt";
 import * as fs from "fs";
 import * as path from "path";
 import { Vec3 } from "bdsx/bds/blockpos";
+import { ActorFlags } from "bdsx/bds/actor";
 interface clogconfig {
     combattime: number,
     disablekillmessageonclog: boolean,
     disabletridentsincombat: boolean,
     maxtridentusesincombat: number,
-    disablepearlsincombat: boolean
+    disablepearlsincombat: boolean,
+    disableelytrasincombat: boolean
   }
   const configdata = fs.readFileSync(path.join(__dirname, "./config.json"), 'utf8');
     const config: clogconfig = JSON.parse(configdata);
@@ -112,6 +114,19 @@ events.packetBefore(MinecraftPacketIds.InventoryTransaction).on((pkt, ni) => {
     }
 }
 });
+events.packetBefore(MinecraftPacketIds.PlayerAuthInput).on((pkt, ni) => {
+    const combatTime = combatmap.get(ni.getActor()?.getName());
+    if (combatTime !== undefined) {
+        if (combatTime === 0) return;
+      if(ni.getActor()?.isPlayer() === true && config.disableelytrasincombat === true) {
+      if(ni.getActor()?.getStatusFlag(ActorFlags.Gliding) === true) {
+      ni.getActor()?.setStatusFlag(ActorFlags.Gliding, false)
+      ni.getActor()?.sendMessage(`Elytras are not allowed in combat.`)
+      console.log(`${ni.getActor()?.getName()} tried to use an elytra in combat.`)
+  }
+    }
+}
+  });
 interval = setInterval(() => {
     for (const player of bedrockServer.serverInstance.getPlayers()) {
         if (!player) return;

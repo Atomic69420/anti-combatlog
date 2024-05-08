@@ -3,5 +3,6 @@
     "disablekillmessageonclog": true,
     "disabletridentsincombat": true,
     "maxtridentusesincombat": 5,
-    "disablepearlsincombat": true
+    "disablepearlsincombat": true,
+    "disableelytrasincombat": true
 }
