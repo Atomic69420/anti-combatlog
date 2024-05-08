@@ -1,4 +1,7 @@
 {
     "combattime": 20,
-    "disablekillmessageonclog": true
+    "disablekillmessageonclog": true,
+    "disabletridentsincombat": true,
+    "maxtridentusesincombat": 5,
+    "disablepearlsincombat": true
 }
