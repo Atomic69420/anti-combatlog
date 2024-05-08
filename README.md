@@ -10,7 +10,7 @@ Please read the license file which contains a Creative Commons CC BY-NC-ND 4.0 l
 - [x] Customizable combat time
 - [x] Disable pearls in combat
 - [x] Disable tridents in combat
-- [ ] Disable elytras in combat
+- [x] Disable elytras in combat
 ## Config
 - combattime: the amount of time a player needs to wait until leaving without any punishment.
 - disablekillmessageonclog: disable the death message when a player is killed via the usage of commands.
