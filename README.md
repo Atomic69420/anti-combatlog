@@ -14,3 +14,6 @@ Please read the license file which contains a Creative Commons CC BY-NC-ND 4.0 l
 ## Config
 - combattime: the amount of time a player needs to wait until leaving without any punishment.
 - disablekillmessageonclog: disable the death message when a player is killed via the usage of commands.
+- disabletridentsincombat: disable the use of tridents via teleporting the player back to their last location and removing their riptide if maxtridentusesincombat is exceeded.
+- maxtridentusesincombat: max amount of times a player can use their trident in combat before getting their riptide removed.
+- disablepearlsincombat: disable the use of ender pearls in combat by canceling the use of it.
