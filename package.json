@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A bdsx plugin to stop players from combat logging.",
 	"main": "index.js",
-	"keywords": ["BDSX", "BDSX-Plugin", "Anticheat"],
+	"keywords": ["BDSX", "BDSX-Plugin"],
 	"author": "Atomic69420, AtomicTM6850 or ip_atomic",
 	"license": "CC-BY-NC-ND-4.0",
 	"bdsxPlugin": true,
